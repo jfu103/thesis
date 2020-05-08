@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+
+	<style>
+		#videoBG {
+			position: fixed;
+			z-index: -1;
+			/*not work if the screen ratio is below 16/9*/
+			max-width: 100%;
+			height: auto;
+		}
+
+		@media (min-aspect-ratio: 16/9) {
+			#videoBG {
+				width: 100%;
+				height: auto;
+			}
+		}
+
+		@media (max-aspect-ratio: 16/9) {
+			#videoBG {
+				width: auto;
+				height: 100%;
+			}
+		}
+	</style>
+</head>
+
+<body>
+<video autoplay muted id="myVideo" width=100%;>
+		<source src="/assets/loadin.mp4" type="video/mp4">
+	</video>
+
+
+<script>
+        var timer = setTimeout(function() {
+            window.location='index.html'
+        }, 30500);
+    </script>
+</body>
+
+</html>
